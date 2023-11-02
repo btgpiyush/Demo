@@ -6,6 +6,8 @@ import {
   TouchableOpacity,
   View,
   Image,
+  ImageBackground,
+  ScrollView,
 } from "react-native";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -100,20 +102,210 @@ export default Screen2 = () => {
               backgroundColor: "#8000FF",
               justifyContent: "center",
               alignItems: "center",
-              padding:8,
+              padding: 8,
             }}
           >
-            <Text style={{fontWeight:900,color:'white',fontSize:12}}>SEARCH</Text>
+            <Text style={{ fontWeight: 900, color: "white", fontSize: 12 }}>
+              SEARCH
+            </Text>
           </TouchableOpacity>
         </View>
         {/* ----------------------- */}
-        <View style={{margin:10}}>
-        <Text style={{color:'white',fontWeight:900,fontSize:15}}>Events I'm invited to</Text>
-        <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:3}}>
-          <Text style={{color:'#D0D4CA', fontSize:11}}>Event where you were invited to attend</Text>
-          <Text style={{color:'#8000FF',fontSize:11,}}>View all</Text>
+        <View style={{ margin: 10 }}>
+          <Text style={{ color: "white", fontWeight: 900, fontSize: 15 }}>
+            Events I'm invited to
+          </Text>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginTop: 3,
+            }}
+          >
+            <Text style={{ color: "#D0D4CA", fontSize: 11 }}>
+              Event where you were invited to attend
+            </Text>
+            <Text style={{ color: "#8000FF", fontSize: 11 }}>View all</Text>
+          </View>
+        </View>
+
+        {/* background-image--1-strt------ */}
+        <ScrollView horizontal={true}>
+        <View style={{flexDirection:'row'}}>
+        <View
+          style={{
+            justifyContent: "center",
+            margin:20,
+           
+            // width:400,
+            width:330,
+            height:200,
+           
+            alignItems: "center",
+            borderRadius:10,
+          }}
+        >
+          <ImageBackground
+            style={{ width: "100%", height: 200}}
+            imageStyle={{ borderRadius:10}}
+            source={require("./img/background.jpg")}
+          >
+            {/* ---icon---- */}
+            <View style={{ alignItems: "flex-end"}}>
+              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
+              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
+              </View>
+            </View>
+            {/* ------/icon---- */}
+            <View
+              style={{
+                flexDirection: "row",
+                height: "65%",
+                // backgroundColor:'yellow',
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                padding:10,
+              }}
+            >
+              <View>
+                <Text style={{ color: "#fff" }}>Event Name</Text>
+                <Text style={{ color: "#fff", fontSize: 10 }}>
+                  March 1,2023-6:00pm
+                </Text>
+              </View>
+              <View style={{flexDirection:'row'}}>
+              <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+               <Image
+                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+                <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image></View>
+            </View>
+          </ImageBackground>
+        </View>
+        {/* ---------/background-1------------ */}
+        <View
+          style={{
+            justifyContent: "center",
+            margin: 20,
+            width:330,
+            height:200,
+            backgroundColor: "blue",
+            alignItems: "center",
+            borderRadius:10,
+          }}
+        >
+          <ImageBackground
+            style={{ width: "100%", height: 200}}
+            imageStyle={{ borderRadius:10}}
+            source={require("./img/background.jpg")}
+          >
+            {/* ---icon---- */}
+            <View style={{ alignItems: "flex-end"}}>
+              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
+              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
+              </View>
+            </View>
+            {/* ------/icon---- */}
+            <View
+              style={{
+                flexDirection: "row",
+                height: "65%",
+                // backgroundColor:'yellow',
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                padding:10,
+              }}
+            >
+              <View>
+                <Text style={{ color: "#fff" }}>Event Name</Text>
+                <Text style={{ color: "#fff", fontSize: 10 }}>
+                  March 1,2023-6:00pm
+                </Text>
+              </View>
+              <View style={{flexDirection:'row'}}>
+              <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+               <Image
+                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+                <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image></View>
+            </View>
+          </ImageBackground>
+        </View>
+        {/* --------/-background2------ */}
+        <View
+          style={{
+            justifyContent: "center",
+            margin: 20,
+            width:330,
+            height:200,
+            backgroundColor: "red",
+            alignItems: "center",
+            borderRadius:10,
+          }}
+        >
+          <ImageBackground
+            style={{ width: "100%", height: 200}}
+            imageStyle={{ borderRadius:10}}
+            source={require("./img/background.jpg")}
+          >
+            {/* ---icon---- */}
+            <View style={{ alignItems: "flex-end"}}>
+              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
+              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
+              </View>
+            </View>
+            {/* ------/icon---- */}
+            <View
+              style={{
+                flexDirection: "row",
+                height: "65%",
+                // backgroundColor:'yellow',
+                justifyContent: "space-between",
+                alignItems: "flex-end",
+                padding:10,
+              }}
+            >
+              <View>
+                <Text style={{ color: "#fff" }}>Event Name</Text>
+                <Text style={{ color: "#fff", fontSize: 10 }}>
+                  March 1,2023-6:00pm
+                </Text>
+              </View>
+              <View style={{flexDirection:'row'}}>
+              <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+               <Image
+                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
+                source={require("./img/pk.jpg")}
+              ></Image>
+                <Image
+                style={{ width: 40, height: 40, borderRadius: 20 }}
+                source={require("./img/pk.jpg")}
+              ></Image></View>
+            </View>
+          </ImageBackground>
+
         </View>
         </View>
+        </ScrollView>
+        {/* -----/--background3------ */}
+    
       </LinearGradient>
     </View>
   );
