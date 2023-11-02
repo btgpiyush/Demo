@@ -37,9 +37,9 @@ export default Screen2 = () => {
     <View>
       <LinearGradient
         colors={["black", "#8020FF", "black"]}
-        style={{ height: "100%" }}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
+        // style={{ height: "100%" }}
+        start={{ x: 1, y:0  }}
+        end={{ x: 0, y: 0}}
       >
         <View style={{ margin: 13, marginTop: 90, backgroundColor: "#191717" }}>
           <View
@@ -152,7 +152,7 @@ export default Screen2 = () => {
               <ImageBackground
                 style={{ width: "100%", height: 200 }}
                 imageStyle={{ borderRadius: 10 }}
-                source={require("./img/background.jpg")}
+                source={require("./img/pk.jpg")}
               >
                 {/* ---icon---- */}
                 <View style={{ alignItems: "flex-end" }}>
@@ -191,7 +191,7 @@ export default Screen2 = () => {
                   <View style={{ flexDirection: "row" }}>
                     <Image
                       style={{ width: 40, height: 40, borderRadius: 20 }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/dipesh.jpg")}
                     ></Image>
                     <Image
                       style={{
@@ -201,11 +201,11 @@ export default Screen2 = () => {
                         marginLeft: 10,
                         marginRight: 10,
                       }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/aman1.jpg")}
                     ></Image>
                     <Image
                       style={{ width: 40, height: 40, borderRadius: 20 }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/rohit.jpg")}
                     ></Image>
                   </View>
                 </View>
@@ -228,7 +228,7 @@ export default Screen2 = () => {
               <ImageBackground
                 style={{ width: "100%", height: 200 }}
                 imageStyle={{ borderRadius: 10 }}
-                source={require("./img/background.jpg")}
+                source={require("./img/dipesh.jpg")}
               >
                 {/* ---icon---- */}
                 <View style={{ alignItems: "flex-end" }}>
@@ -277,11 +277,11 @@ export default Screen2 = () => {
                         marginLeft: 10,
                         marginRight: 10,
                       }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/dipesh.jpg")}
                     ></Image>
                     <Image
                       style={{ width: 40, height: 40, borderRadius: 20 }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/rohit.jpg")}
                     ></Image>
                   </View>
                 </View>
@@ -363,8 +363,15 @@ export default Screen2 = () => {
             </View>
           </View>
         </ScrollView>
+        </LinearGradient>
         {/* -----/--background3------ */}
         {/* ---------------------------------------------------------------- */}
+        <LinearGradient
+        colors={["black", "#8020FF",'black']}
+        // style={{ height: "100%" }}
+        start={{ x: 1, y: 0 }}
+        end={{ x: 1, y: 0}}
+      >
         <Text
           style={{
             color: "#fff",
@@ -379,6 +386,7 @@ export default Screen2 = () => {
         <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 7 }}>
           Most anticipated events based on user preferences
         </Text>
+        
         {/* --------------- */}
         <View style={{ marginTop: 15, flexDirection: "row",justifyContent:'space-between' }}>
           <View
@@ -388,6 +396,7 @@ export default Screen2 = () => {
               borderRadius: 7,
              flex:1,
               padding: 6,
+              marginLeft:10,
             }}
           >
             <Image
@@ -422,6 +431,7 @@ export default Screen2 = () => {
               // width: 100,
               flex:1,
               padding: 6,
+              marginRight:10,
             }}
           >
             <Image
@@ -432,7 +442,7 @@ export default Screen2 = () => {
           </View>
         </View>
 
-        {/* ---------------- */}
+        {/* -------------footer--- */}
         <View
               style={{
                 justifyContent: "center",
@@ -440,7 +450,7 @@ export default Screen2 = () => {
                 marginLeft:15,
                 marginTop:20,
                 // width:400,
-                width: 350,
+                width: 360,
                 height: 200,
                 // backgroundColor:'yellow',
                 alignItems: "center",
@@ -450,7 +460,7 @@ export default Screen2 = () => {
               <ImageBackground
                 style={{ width: "100%", height: 200 }}
                 imageStyle={{ borderRadius: 10 }}
-                source={require("./img/background.jpg")}
+                source={require("./img/dipesh.jpg")}
               >
                 {/* ---icon---- */}
                 <View style={{ alignItems: "flex-end" }}>
@@ -489,7 +499,7 @@ export default Screen2 = () => {
                   <View style={{ flexDirection: "row" }}>
                     <Image
                       style={{ width: 40, height: 40, borderRadius: 20 }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/rohit.jpg")}
                     ></Image>
                     <Image
                       style={{
@@ -499,17 +509,18 @@ export default Screen2 = () => {
                         marginLeft: 10,
                         marginRight: 10,
                       }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/rohit1.jpg")}
                     ></Image>
                     <Image
                       style={{ width: 40, height: 40, borderRadius: 20 }}
-                      source={require("./img/pk.jpg")}
+                      source={require("./img/rohit.jpg")}
                     ></Image>
                   </View>
                 </View>
               </ImageBackground>
             </View>
-      </LinearGradient>
+            </LinearGradient>
+      {/* </LinearGradient> */}
     </View>
   );
 };
