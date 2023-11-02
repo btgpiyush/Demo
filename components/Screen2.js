@@ -130,182 +130,385 @@ export default Screen2 = () => {
         </View>
 
         {/* background-image--1-strt------ */}
-        <ScrollView horizontal={true}>
-        <View style={{flexDirection:'row'}}>
-        <View
-          style={{
-            justifyContent: "center",
-            margin:20,
-           
-            // width:400,
-            width:330,
-            height:200,
-           
-            alignItems: "center",
-            borderRadius:10,
-          }}
+        <ScrollView
+          showsHorizontalScrollIndicator={false}
+          horizontal={true}
+          style={{ maxHeight: 200 }}
         >
-          <ImageBackground
-            style={{ width: "100%", height: 200}}
-            imageStyle={{ borderRadius:10}}
-            source={require("./img/background.jpg")}
-          >
-            {/* ---icon---- */}
-            <View style={{ alignItems: "flex-end"}}>
-              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
-              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
-              </View>
-            </View>
-            {/* ------/icon---- */}
+          <View style={{ flexDirection: "row", height: 300 }}>
             <View
               style={{
-                flexDirection: "row",
-                height: "65%",
+                justifyContent: "center",
+                margin: 1,
+                marginLeft: 12,
+                // width:400,
+                width: 330,
+                height: 200,
                 // backgroundColor:'yellow',
-                justifyContent: "space-between",
-                alignItems: "flex-end",
-                padding:10,
+                alignItems: "center",
+                borderRadius: 10,
               }}
             >
-              <View>
-                <Text style={{ color: "#fff" }}>Event Name</Text>
-                <Text style={{ color: "#fff", fontSize: 10 }}>
-                  March 1,2023-6:00pm
-                </Text>
-              </View>
-              <View style={{flexDirection:'row'}}>
-              <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-               <Image
-                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-                <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image></View>
+              <ImageBackground
+                style={{ width: "100%", height: 200 }}
+                imageStyle={{ borderRadius: 10 }}
+                source={require("./img/background.jpg")}
+              >
+                {/* ---icon---- */}
+                <View style={{ alignItems: "flex-end" }}>
+                  <View
+                    style={{
+                      backgroundColor: "purple",
+                      padding: 7,
+                      borderRadius: 20,
+                      marginTop: 20,
+                      marginRight: 20,
+                    }}
+                  >
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("./img/fav.png")}
+                    ></Image>
+                  </View>
+                </View>
+                {/* ------/icon---- */}
+                <View
+                  style={{
+                    flexDirection: "row",
+                    height: "65%",
+                    // backgroundColor:'yellow',
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                    padding: 10,
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: "#fff" }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                      March 1,2023-6:00pm
+                    </Text>
+                  </View>
+                  <View style={{ flexDirection: "row" }}>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: 20,
+                        marginLeft: 10,
+                        marginRight: 10,
+                      }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                  </View>
+                </View>
+              </ImageBackground>
             </View>
-          </ImageBackground>
-        </View>
-        {/* ---------/background-1------------ */}
-        <View
-          style={{
-            justifyContent: "center",
-            margin: 20,
-            width:330,
-            height:200,
-            backgroundColor: "blue",
-            alignItems: "center",
-            borderRadius:10,
-          }}
-        >
-          <ImageBackground
-            style={{ width: "100%", height: 200}}
-            imageStyle={{ borderRadius:10}}
-            source={require("./img/background.jpg")}
-          >
-            {/* ---icon---- */}
-            <View style={{ alignItems: "flex-end"}}>
-              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
-              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
-              </View>
-            </View>
-            {/* ------/icon---- */}
+            {/* ---------/background-1-----2strt------- */}
             <View
               style={{
-                flexDirection: "row",
-                height: "65%",
-                // backgroundColor:'yellow',
-                justifyContent: "space-between",
-                alignItems: "flex-end",
-                padding:10,
+                justifyContent: "center",
+                margin: 1,
+                marginLeft: 20,
+                marginRight: 20,
+                width: 330,
+                height: 200,
+                backgroundColor: "blue",
+                alignItems: "center",
+                borderRadius: 10,
               }}
             >
-              <View>
-                <Text style={{ color: "#fff" }}>Event Name</Text>
-                <Text style={{ color: "#fff", fontSize: 10 }}>
-                  March 1,2023-6:00pm
-                </Text>
-              </View>
-              <View style={{flexDirection:'row'}}>
-              <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-               <Image
-                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-                <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image></View>
+              <ImageBackground
+                style={{ width: "100%", height: 200 }}
+                imageStyle={{ borderRadius: 10 }}
+                source={require("./img/background.jpg")}
+              >
+                {/* ---icon---- */}
+                <View style={{ alignItems: "flex-end" }}>
+                  <View
+                    style={{
+                      backgroundColor: "purple",
+                      padding: 7,
+                      borderRadius: 20,
+                      marginTop: 20,
+                      marginRight: 20,
+                    }}
+                  >
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("./img/fav.png")}
+                    ></Image>
+                  </View>
+                </View>
+                {/* ------/icon---- */}
+                <View
+                  style={{
+                    flexDirection: "row",
+                    height: "65%",
+                    // backgroundColor:'yellow',
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                    padding: 10,
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: "#fff" }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                      March 1,2023-6:00pm
+                    </Text>
+                  </View>
+                  <View style={{ flexDirection: "row" }}>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: 20,
+                        marginLeft: 10,
+                        marginRight: 10,
+                      }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                  </View>
+                </View>
+              </ImageBackground>
             </View>
-          </ImageBackground>
-        </View>
-        {/* --------/-background2------ */}
-        <View
-          style={{
-            justifyContent: "center",
-            margin: 20,
-            width:330,
-            height:200,
-            backgroundColor: "red",
-            alignItems: "center",
-            borderRadius:10,
-          }}
-        >
-          <ImageBackground
-            style={{ width: "100%", height: 200}}
-            imageStyle={{ borderRadius:10}}
-            source={require("./img/background.jpg")}
-          >
-            {/* ---icon---- */}
-            <View style={{ alignItems: "flex-end"}}>
-              <View style={{backgroundColor:'purple',padding:7,borderRadius:20, marginTop:20,marginRight:20}}>
-              <Image style={{width:25,height:25}}source={require("./img/fav.png")}></Image>
-              </View>
-            </View>
-            {/* ------/icon---- */}
+            {/* --------/-background2------ */}
             <View
               style={{
-                flexDirection: "row",
-                height: "65%",
-                // backgroundColor:'yellow',
-                justifyContent: "space-between",
-                alignItems: "flex-end",
-                padding:10,
+                justifyContent: "center",
+                margin: 1,
+                width: 330,
+                height: 200,
+                backgroundColor: "red",
+                alignItems: "center",
+                borderRadius: 10,
               }}
             >
-              <View>
-                <Text style={{ color: "#fff" }}>Event Name</Text>
-                <Text style={{ color: "#fff", fontSize: 10 }}>
-                  March 1,2023-6:00pm
-                </Text>
-              </View>
-              <View style={{flexDirection:'row'}}>
-              <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-               <Image
-                style={{ width: 40, height: 40, borderRadius: 20,marginLeft:10,marginRight:10 }}
-                source={require("./img/pk.jpg")}
-              ></Image>
-                <Image
-                style={{ width: 40, height: 40, borderRadius: 20 }}
-                source={require("./img/pk.jpg")}
-              ></Image></View>
+              <ImageBackground
+                style={{ width: "100%", height: 200 }}
+                imageStyle={{ borderRadius: 10 }}
+                source={require("./img/background.jpg")}
+              >
+                {/* ---icon---- */}
+                <View style={{ alignItems: "flex-end" }}>
+                  <View
+                    style={{
+                      backgroundColor: "purple",
+                      padding: 7,
+                      borderRadius: 20,
+                      marginTop: 20,
+                      marginRight: 20,
+                    }}
+                  >
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("./img/fav.png")}
+                    ></Image>
+                  </View>
+                </View>
+                {/* ------/icon---- */}
+                <View
+                  style={{
+                    flexDirection: "row",
+                    height: "65%",
+                    // backgroundColor:'yellow',
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                    padding: 10,
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: "#fff" }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                      March 1,2023-6:00pm
+                    </Text>
+                  </View>
+                  <View style={{ flexDirection: "row" }}>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: 20,
+                        marginLeft: 10,
+                        marginRight: 10,
+                      }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                  </View>
+                </View>
+              </ImageBackground>
             </View>
-          </ImageBackground>
-
-        </View>
-        </View>
+          </View>
         </ScrollView>
         {/* -----/--background3------ */}
-    
+        {/* ---------------------------------------------------------------- */}
+        <Text
+          style={{
+            color: "#fff",
+            fontSize: 17,
+            fontWeight: 900,
+            marginTop: 20,
+            marginLeft: 7,
+          }}
+        >
+          Highly anticipated events
+        </Text>
+        <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 7 }}>
+          Most anticipated events based on user preferences
+        </Text>
+        {/* --------------- */}
+        <View style={{ marginTop: 15, flexDirection: "row",justifyContent:'space-between' }}>
+          <View
+            style={{
+              flexDirection: "row",
+              backgroundColor: "#191717",
+              borderRadius: 7,
+             flex:1,
+              padding: 6,
+            }}
+          >
+            <Image
+              style={{ width: 17, height: 17 }}
+              source={require("./img/setting.png")}
+            ></Image>
+            <Text style={{ color: "#fff", marginLeft: 10,fontSize:11 }}>SORT</Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              backgroundColor: "#191717",
+              borderRadius: 7,
+              // width: 100,
+              flex:1,
+              padding: 6,
+              marginLeft:10,
+              marginRight:10,
+            }}
+          >
+            <Image
+              style={{ width: 17, height: 17 }}
+              source={require("./img/setting.png")}
+            ></Image>
+            <Text style={{ color: "#fff", marginLeft: 10 ,fontSize:11}}>FILTER</Text>
+          </View>
+          <View
+            style={{
+              flexDirection: "row",
+              backgroundColor: "#191717",
+              borderRadius: 7,
+              // width: 100,
+              flex:1,
+              padding: 6,
+            }}
+          >
+            <Image
+              style={{ width: 17, height: 17 }}
+              source={require("./img/setting.png")}
+            ></Image>
+            <Text style={{ color: "#fff", marginLeft: 10,fontSize:10 }}>VIEW ON MAP</Text>
+          </View>
+        </View>
+
+        {/* ---------------- */}
+        <View
+              style={{
+                justifyContent: "center",
+              
+                marginLeft:15,
+                marginTop:20,
+                // width:400,
+                width: 350,
+                height: 200,
+                // backgroundColor:'yellow',
+                alignItems: "center",
+                borderRadius: 10,
+              }}
+            >
+              <ImageBackground
+                style={{ width: "100%", height: 200 }}
+                imageStyle={{ borderRadius: 10 }}
+                source={require("./img/background.jpg")}
+              >
+                {/* ---icon---- */}
+                <View style={{ alignItems: "flex-end" }}>
+                  <View
+                    style={{
+                      backgroundColor: "purple",
+                      padding: 7,
+                      borderRadius: 20,
+                      marginTop: 20,
+                      marginRight: 20,
+                    }}
+                  >
+                    <Image
+                      style={{ width: 25, height: 25 }}
+                      source={require("./img/fav.png")}
+                    ></Image>
+                  </View>
+                </View>
+                {/* ------/icon---- */}
+                <View
+                  style={{
+                    flexDirection: "row",
+                    height: "65%",
+                    // backgroundColor:'yellow',
+                    justifyContent: "space-between",
+                    alignItems: "flex-end",
+                    padding: 10,
+                  }}
+                >
+                  <View>
+                    <Text style={{ color: "#fff" }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                      March 1,2023-6:00pm
+                    </Text>
+                  </View>
+                  <View style={{ flexDirection: "row" }}>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: 20,
+                        marginLeft: 10,
+                        marginRight: 10,
+                      }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                    <Image
+                      style={{ width: 40, height: 40, borderRadius: 20 }}
+                      source={require("./img/pk.jpg")}
+                    ></Image>
+                  </View>
+                </View>
+              </ImageBackground>
+            </View>
       </LinearGradient>
     </View>
   );
