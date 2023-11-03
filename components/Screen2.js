@@ -41,7 +41,7 @@ export default Screen2 = () => {
         start={{ x: 1, y:0  }}
         end={{ x: 0, y: 0}}
       >
-        <View style={{ margin: 13, marginTop: 90, backgroundColor: "#191717" }}>
+        <View style={{ marginLeft:13,marginRight:13, marginTop: 50, backgroundColor: "#191717" }}>
           <View
             style={{
               flexDirection: "row",
@@ -110,9 +110,17 @@ export default Screen2 = () => {
             </Text>
           </TouchableOpacity>
         </View>
+        </LinearGradient>
         {/* ----------------------- */}
-        <View style={{ margin: 10 }}>
-          <Text style={{ color: "white", fontWeight: 900, fontSize: 15 }}>
+    
+          <LinearGradient
+        colors={["black", "#8020FF","black"]}
+        // style={{ height: "10%" }}
+        start={{ x: 0, y:3  }}
+        end={{ x: 0, y:3 }}
+      >
+        <View style={{ margin: 10}}>
+          <Text style={{ color: "white", fontWeight: 900, fontSize: 15,marginTop:10 }}>
             Events I'm invited to
           </Text>
           <View
@@ -128,8 +136,8 @@ export default Screen2 = () => {
             <Text style={{ color: "#8000FF", fontSize: 11 }}>View all</Text>
           </View>
         </View>
-
-        {/* background-image--1-strt------ */}
+    
+    {/* --------------------imageBackGround 1----------------- */}
         <ScrollView
           showsHorizontalScrollIndicator={false}
           horizontal={true}
@@ -139,7 +147,7 @@ export default Screen2 = () => {
             <View
               style={{
                 justifyContent: "center",
-                margin: 1,
+               
                 marginLeft: 12,
                 // width:400,
                 width: 330,
@@ -149,6 +157,7 @@ export default Screen2 = () => {
                 borderRadius: 10,
               }}
             >
+           
               <ImageBackground
                 style={{ width: "100%", height: 200 }}
                 imageStyle={{ borderRadius: 10 }}
@@ -167,7 +176,7 @@ export default Screen2 = () => {
                   >
                     <Image
                       style={{ width: 25, height: 25 }}
-                      source={require("./img/fav.png")}
+                      source={require("./img/heart4.png")}
                     ></Image>
                   </View>
                 </View>
@@ -183,8 +192,8 @@ export default Screen2 = () => {
                   }}
                 >
                   <View>
-                    <Text style={{ color: "#fff" }}>Event Name</Text>
-                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                    <Text style={{ color: "#fff",fontWeight:900 }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10,fontWeight:900 }}>
                       March 1,2023-6:00pm
                     </Text>
                   </View>
@@ -210,7 +219,9 @@ export default Screen2 = () => {
                   </View>
                 </View>
               </ImageBackground>
+              
             </View>
+          
             {/* ---------/background-1-----2strt------- */}
             <View
               style={{
@@ -243,7 +254,7 @@ export default Screen2 = () => {
                   >
                     <Image
                       style={{ width: 25, height: 25 }}
-                      source={require("./img/fav.png")}
+                      source={require("./img/heart4.png")}
                     ></Image>
                   </View>
                 </View>
@@ -259,8 +270,8 @@ export default Screen2 = () => {
                   }}
                 >
                   <View>
-                    <Text style={{ color: "#fff" }}>Event Name</Text>
-                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                    <Text style={{ color: "#fff" ,fontWeight:900}}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 ,fontWeight:900}}>
                       March 1,2023-6:00pm
                     </Text>
                   </View>
@@ -317,7 +328,7 @@ export default Screen2 = () => {
                   >
                     <Image
                       style={{ width: 25, height: 25 }}
-                      source={require("./img/fav.png")}
+                      source={require("./img/heart4.png")}
                     ></Image>
                   </View>
                 </View>
@@ -333,8 +344,8 @@ export default Screen2 = () => {
                   }}
                 >
                   <View>
-                    <Text style={{ color: "#fff" }}>Event Name</Text>
-                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                    <Text style={{ color: "#fff",fontWeight:900 }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10 ,fontWeight:900}}>
                       March 1,2023-6:00pm
                     </Text>
                   </View>
@@ -364,11 +375,12 @@ export default Screen2 = () => {
           </View>
         </ScrollView>
         </LinearGradient>
+      
         {/* -----/--background3------ */}
         {/* ---------------------------------------------------------------- */}
         <LinearGradient
         colors={["black", "#8020FF",'black']}
-        // style={{ height: "100%" }}
+        style={{ height: "100%" }}
         start={{ x: 1, y: 0 }}
         end={{ x: 1, y: 0}}
       >
@@ -377,13 +389,13 @@ export default Screen2 = () => {
             color: "#fff",
             fontSize: 17,
             fontWeight: 900,
-            marginTop: 20,
+            marginTop: 35,
             marginLeft: 7,
           }}
         >
           Highly anticipated events
         </Text>
-        <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 7 }}>
+        <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 7,marginTop:7 }}>
           Most anticipated events based on user preferences
         </Text>
         
@@ -401,7 +413,7 @@ export default Screen2 = () => {
           >
             <Image
               style={{ width: 17, height: 17 }}
-              source={require("./img/setting.png")}
+              source={require("./img/sort.png")}
             ></Image>
             <Text style={{ color: "#fff", marginLeft: 10,fontSize:11 }}>SORT</Text>
           </View>
@@ -419,7 +431,7 @@ export default Screen2 = () => {
           >
             <Image
               style={{ width: 17, height: 17 }}
-              source={require("./img/setting.png")}
+              source={require("./img/filter.png")}
             ></Image>
             <Text style={{ color: "#fff", marginLeft: 10 ,fontSize:11}}>FILTER</Text>
           </View>
@@ -436,7 +448,7 @@ export default Screen2 = () => {
           >
             <Image
               style={{ width: 17, height: 17 }}
-              source={require("./img/setting.png")}
+              source={require("./img/location.png")}
             ></Image>
             <Text style={{ color: "#fff", marginLeft: 10,fontSize:10 }}>VIEW ON MAP</Text>
           </View>
@@ -475,7 +487,7 @@ export default Screen2 = () => {
                   >
                     <Image
                       style={{ width: 25, height: 25 }}
-                      source={require("./img/fav.png")}
+                      source={require("./img/heart4.png")}
                     ></Image>
                   </View>
                 </View>
@@ -491,8 +503,8 @@ export default Screen2 = () => {
                   }}
                 >
                   <View>
-                    <Text style={{ color: "#fff" }}>Event Name</Text>
-                    <Text style={{ color: "#fff", fontSize: 10 }}>
+                    <Text style={{ color: "#fff",fontWeight:900 }}>Event Name</Text>
+                    <Text style={{ color: "#fff", fontSize: 10,fontWeight:900 }}>
                       March 1,2023-6:00pm
                     </Text>
                   </View>
