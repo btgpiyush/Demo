@@ -10,7 +10,7 @@ export default function App() {
     <NavigationContainer>
       <StatusBar backgroundColor="black" barStyle="light-content" />
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {/* <Stack.Navigator> */}
+   
         <Stack.Screen
           name="Home"
           options={{
@@ -22,7 +22,7 @@ export default function App() {
         />
         
         <Stack.Screen name="Screen2" component={Screen2} />
-      {/* </Stack.Navigator> */}
+     
       </Stack.Navigator>
     </NavigationContainer>
   );
