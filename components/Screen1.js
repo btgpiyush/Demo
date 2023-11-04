@@ -7,6 +7,7 @@ export default Page1 = (props) => {
   return (
     <ScrollView style={{backgroundColor:'black'}}>
     <View >
+      <Text>hello</Text>
         <View style={styles.container}>
         <View>
         <Image style={{width:100,height:100, borderRadius:50}}source={require('./img/pk.jpg')} />
