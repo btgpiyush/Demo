@@ -15,7 +15,7 @@ export default Page1 = (props) => {
       <View style={{marginLeft:20}}>
         <Text style={{fontSize:22,fontWeight:900,color:'white'}}>Daniel Ancuta</Text>
         <Text style={{fontSize:14,color:'white'}}>Basic level</Text>
-        <Text style={{fontSize:11,color:'white'}}>0 points</Text>
+        <Text style={{fontSize:11,color:'white'}}>10 points</Text>
       </View>
       </View>
       {/* --------- */}
