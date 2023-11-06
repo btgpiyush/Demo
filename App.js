@@ -3,6 +3,14 @@ import Screen1 from "./components/Screen1";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Screen2 from "./components/Screen2";
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
+
+
+
+import { LogBox } from 'react-native';
+LogBox.ignoreLogs(['Warning: ...']); // Ignore log notification by message
+LogBox.ignoreAllLogs();//Ignore all log notifications
 
 const Stack = createNativeStackNavigator();
 export default function App() {
@@ -13,6 +21,7 @@ export default function App() {
    
         <Stack.Screen
           name="Home"
+          
           options={{
             headerStyle: {
               backgroundColor: "black",

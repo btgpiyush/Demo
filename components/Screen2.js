@@ -11,6 +11,8 @@ import {
 } from "react-native";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
+import { Dimensions } from 'react-native';
+
 
 export default Screen2 = () => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
@@ -34,10 +36,12 @@ export default Screen2 = () => {
     hideDatePicker();
   };
   return (
-    <View>
+   
+    <View style={{height:'100%',backgroundColor:'black'}}>
+       <ScrollView >
       <LinearGradient
         colors={["black", "#8020FF", "black"]}
-        // style={{ height: "100%" }}
+        style={{ height: "100%" }}
         start={{ x: 1, y:0  }}
         end={{ x: 0, y: 0}}
       >
@@ -62,8 +66,9 @@ export default Screen2 = () => {
             <TextInput
               placeholder="Search for party by name,type or venue"
               style={{ color: "grey", padding: 9 }}
+              placeholderTextColor={'grey'}
             >
-              <Text>Search for party by name,type or venue</Text>
+              
             </TextInput>
           </View>
           <DateTimePickerModal
@@ -110,15 +115,15 @@ export default Screen2 = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        </LinearGradient>
+        {/* </LinearGradient> */}
         {/* ----------------------- */}
     
-          <LinearGradient
-        colors={["black", "#8020FF","black"]}
+          {/* <LinearGradient
+        colors={["black", "#8020FF","#18182C"]}
         // style={{ height: "10%" }}
-        start={{ x: 0, y:3  }}
-        end={{ x: 0, y:3 }}
-      >
+        start={{ x: 0, y:1  }}
+        end={{ x: 9, y:0 }}
+      > */}
         <View style={{ margin: 10}}>
           <Text style={{ color: "white", fontWeight: 900, fontSize: 15,marginTop:10 }}>
             Events I'm invited to
@@ -167,7 +172,7 @@ export default Screen2 = () => {
                 <View style={{ alignItems: "flex-end" }}>
                   <View
                     style={{
-                      backgroundColor: "purple",
+                      backgroundColor: "#8020FF",
                       padding: 7,
                       borderRadius: 20,
                       marginTop: 20,
@@ -245,7 +250,7 @@ export default Screen2 = () => {
                 <View style={{ alignItems: "flex-end" }}>
                   <View
                     style={{
-                      backgroundColor: "purple",
+                      backgroundColor: "#8020FF",
                       padding: 7,
                       borderRadius: 20,
                       marginTop: 20,
@@ -319,7 +324,7 @@ export default Screen2 = () => {
                 <View style={{ alignItems: "flex-end" }}>
                   <View
                     style={{
-                      backgroundColor: "purple",
+                      backgroundColor: "#8020FF",
                       padding: 7,
                       borderRadius: 20,
                       marginTop: 20,
@@ -374,28 +379,28 @@ export default Screen2 = () => {
             </View>
           </View>
         </ScrollView>
-        </LinearGradient>
+        {/* </LinearGradient> */}
       
         {/* -----/--background3------ */}
         {/* ---------------------------------------------------------------- */}
-        <LinearGradient
-        colors={["black", "#8020FF",'black']}
+        {/* <LinearGradient
+        colors={["black", "#8020FF", "black"]}
         style={{ height: "100%" }}
-        start={{ x: 1, y: 0 }}
-        end={{ x: 1, y: 0}}
-      >
+        start={{ x: 1, y:0  }}
+        end={{ x: 0, y: 0}}
+      > */}
         <Text
           style={{
             color: "#fff",
             fontSize: 17,
             fontWeight: 900,
             marginTop: 35,
-            marginLeft: 7,
+            marginLeft: 10,
           }}
         >
           Highly anticipated events
         </Text>
-        <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 7,marginTop:7 }}>
+        <Text style={{ color: "#D0D4CA", fontSize: 11, marginLeft: 10,marginTop:7 }}>
           Most anticipated events based on user preferences
         </Text>
         
@@ -467,10 +472,12 @@ export default Screen2 = () => {
                 // backgroundColor:'yellow',
                 alignItems: "center",
                 borderRadius: 10,
+                borderColor:'blue',
+                borderRadius:4,
               }}
             >
               <ImageBackground
-                style={{ width: "100%", height: 200 }}
+                style={{ width: "100%", height: 200}}
                 imageStyle={{ borderRadius: 10 }}
                 source={require("./img/dipesh.jpg")}
               >
@@ -478,7 +485,7 @@ export default Screen2 = () => {
                 <View style={{ alignItems: "flex-end" }}>
                   <View
                     style={{
-                      backgroundColor: "purple",
+                      backgroundColor: "#8020FF",
                       padding: 7,
                       borderRadius: 20,
                       marginTop: 20,
@@ -531,8 +538,12 @@ export default Screen2 = () => {
                 </View>
               </ImageBackground>
             </View>
-            </LinearGradient>
-      {/* </LinearGradient> */}
+      
+            {/* </LinearGradient> */}
+           
+      </LinearGradient>
+      </ScrollView>
     </View>
+    
   );
 };
