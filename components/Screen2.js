@@ -14,7 +14,7 @@ import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { Dimensions } from 'react-native';
 
 
-export default Screen2 = () => {
+export default Screen2 = (props) => {
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [selectDate, setSelectedDate] = useState("Select Date");
 
@@ -429,16 +429,18 @@ export default Screen2 = () => {
               borderRadius: 7,
               // width: 100,
               flex:1,
-              padding: 6,
+              padding: 8,
               marginLeft:10,
               marginRight:10,
             }}
           >
+            <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>props.navigation.navigate('Screen3')}>
             <Image
               style={{ width: 17, height: 17 }}
               source={require("./img/filter.png")}
             ></Image>
             <Text style={{ color: "#fff", marginLeft: 10 ,fontSize:11}}>FILTER</Text>
+            </TouchableOpacity>
           </View>
           <View
             style={{
@@ -448,14 +450,17 @@ export default Screen2 = () => {
               // width: 100,
               flex:1,
               padding: 6,
+              paddingTop:10,
               marginRight:10,
             }}
           >
+            
             <Image
               style={{ width: 17, height: 17 }}
               source={require("./img/location.png")}
             ></Image>
             <Text style={{ color: "#fff", marginLeft: 10,fontSize:10 }}>VIEW ON MAP</Text>
+       
           </View>
         </View>
 
