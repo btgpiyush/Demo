@@ -9,12 +9,22 @@ import {
   ImageBackground,
   ScrollView,
 } from "react-native";
+import {
+
+  Actionsheet,
+  useDisclose,
+
+  Box,
+  Center,
+  NativeBaseProvider,
+} from "native-base";
 import React, { useState } from "react";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { Dimensions } from 'react-native';
 
 
-export default Screen2 = (props) => {
+function Screen2 (props) {
+  const { isOpen, onOpen, onClose } = useDisclose();
   const [isDatePickerVisible, setDatePickerVisibility] = useState(false);
   const [selectDate, setSelectedDate] = useState("Select Date");
 
@@ -35,7 +45,7 @@ export default Screen2 = (props) => {
     setSelectedDate(x1[2] + "/" + x1[1] + "/" + x1[0]);
     hideDatePicker();
   };
-  return (
+  return<Center>
    
     <View style={{height:'100%',backgroundColor:'black'}}>
        <ScrollView >
@@ -434,7 +444,7 @@ export default Screen2 = (props) => {
               marginRight:10,
             }}
           >
-            <TouchableOpacity style={{flexDirection:'row'}} onPress={()=>props.navigation.navigate('Screen3')}>
+            <TouchableOpacity style={{flexDirection:'row'}} onPress={onOpen}>
             <Image
               style={{ width: 17, height: 17 }}
               source={require("./img/filter.png")}
@@ -547,8 +557,40 @@ export default Screen2 = (props) => {
             {/* </LinearGradient> */}
            
       </LinearGradient>
+      <Center>
+      {/* <Button onPress={onOpen}>Actionsheet</Button> */}
+      <Actionsheet isOpen={isOpen} onClose={onClose} style={{color:'red'}}>
+        <Actionsheet.Content>
+          <Box w="100%" h={60} px={4} justifyContent="center" >
+            <Text
+              fontSize="16"
+              color="gray.500"
+              _dark={{
+                color: "gray.300",
+              }}
+            >
+              Albums
+            </Text>
+          </Box>
+          <Actionsheet.Item>Delete</Actionsheet.Item>
+          <Actionsheet.Item>Care</Actionsheet.Item>
+          <Actionsheet.Item>Play</Actionsheet.Item>
+          <Actionsheet.Item>Favourite</Actionsheet.Item>
+          <Actionsheet.Item>Cancel</Actionsheet.Item>
+        </Actionsheet.Content>
+      </Actionsheet>
+    </Center>
       </ScrollView>
     </View>
     
+    </Center>
+};
+export default () => {
+  return (
+    <NativeBaseProvider>
+      <Center style={{backgroundColor:'red'}}>
+        <Screen2 />
+      </Center>
+    </NativeBaseProvider>
   );
 };
