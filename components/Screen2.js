@@ -620,12 +620,15 @@ function Screen2(props) {
             >
               <Actionsheet.Content
                 style={{ backgroundColor: "#191717", color: "green",
-             
+               height:400,
+               paddingTop:20,
                 justifyContent:'center',
                 alignItems:'center'
               }}
               >
-                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{fontWeight:900,fontSize:20,color:'#8020FF',margin:30,marginTop:0}}>Choose Options</Text>
+                <ScrollView style={{width:'100%'}}>
+                <Actionsheet.Item style={{ backgroundColor: "#191717"}}>
                 <Text style={{ color: "#fff"}}>
                     Event
                   </Text>
@@ -655,6 +658,38 @@ function Screen2(props) {
                     Settings
                   </Text>
                 </Actionsheet.Item>
+
+                 <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff", backgroundColor: "#191717" }}>
+                    Edit
+                  </Text>
+                </Actionsheet.Item>
+                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff", backgroundColor: "#191717" }}>
+                    Choose
+                  </Text>
+                </Actionsheet.Item>
+                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff" }}>
+                    Settings
+                  </Text>
+                </Actionsheet.Item>
+                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff" }}>
+                    View
+                  </Text>
+                </Actionsheet.Item>
+                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff" }}>
+                    Get Info
+                  </Text>
+                </Actionsheet.Item>
+                <Actionsheet.Item style={{ backgroundColor: "#191717" }}>
+                <Text style={{ color: "#fff" }}>
+                    Options
+                  </Text>
+                </Actionsheet.Item>
+                </ScrollView>
               </Actionsheet.Content>
             </Actionsheet>
           </Center>
